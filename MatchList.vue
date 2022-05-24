@@ -33,7 +33,7 @@
 import axios from "axios"
 
 export default {
-    
+       apikey:'%APIKEY%',
         name:'CountriesApi',
         data(){
             return {
@@ -42,7 +42,7 @@ export default {
         },
 
         mounted(){
-            axios.get('https://api.cricapi.com/v1/matches?apikey=da2589ff-76cf-4b11-8654-080868ac896b&offset=0')
+            axios.get(`https://api.cricapi.com/v1/matches?apikey={apikey}&offset=0`)
             .then(res => {
                 console.warn(res.data.data);
                 this.list  = res.data.data;
