@@ -18,7 +18,7 @@
 import axios from "axios"
 
 export default {
-    
+       apikey:'%APIKEY%',
         name:'PlayersApi',
         data(){
             return {
@@ -27,7 +27,7 @@ export default {
         },
 
         mounted(){
-            axios.get('https://api.cricapi.com/v1/players?apikey=da2589ff-76cf-4b11-8654-080868ac896b&offset=0&search=Sachini%20Nisansala')
+            axios.get(`https://api.cricapi.com/v1/players?apikey={apikey}&offset=0&search=Sachini%20Nisansala`)
             .then(res => {
                 console.warn(res.data.data);
                 this.list  = res.data.data;
