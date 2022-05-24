@@ -27,7 +27,7 @@
 import axios from "axios"
 
 export default {
-    
+       apikey:'%APIKEY%',
         name:'SeriesInfo',
         data(){
             return {
@@ -41,7 +41,7 @@ export default {
         },
 
         mounted(){
-            axios.get('https://api.cricapi.com/v1/match_info?apikey=da2589ff-76cf-4b11-8654-080868ac896b&id=7d4496c7-f353-4ad9-b20f-a6314e181acf')
+            axios.get(`https://api.cricapi.com/v1/match_info?apikey={apikey}&id=7d4496c7-f353-4ad9-b20f-a6314e181acf`)
             .then(res => {
                 console.log(res.data.data.name)
                 this.name  = res.data.data.name;
