@@ -27,7 +27,8 @@ export default {
         },
 
         mounted(){
-            axios.get(`https://api.cricapi.com/v1/players?apikey={apikey}&offset=0&search=Sachini%20Nisansala`)
+        const apikey = '%APIKEY%';
+            axios.get(`https://api.cricapi.com/v1/players?apikey=${apikey}&offset=0&search=Sachini%20Nisansala`)
             .then(res => {
                 console.warn(res.data.data);
                 this.list  = res.data.data;
