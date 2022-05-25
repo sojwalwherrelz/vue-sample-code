@@ -28,7 +28,9 @@ export default {
 
         mounted(){
         const apikey = '%APIKEY%';
-            axios.get(`https://api.cricapi.com/v1/players?apikey=${apikey}&offset=0&search=Sachini%20Nisansala`)
+            const Name = "Olive Smith"
+            const playerName = Name.replace(" ", "%20");
+            axios.get(`https://api.cricapi.com/v1/players?apikey=${apikey}&offset=0&search=${playerName}`)
             .then(res => {
                 console.warn(res.data.data);
                 this.list  = res.data.data;
