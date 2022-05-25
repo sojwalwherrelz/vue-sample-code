@@ -1,6 +1,6 @@
 <template >
 <div>
-<h1>Fantacy Points Info</h1>
+    <h1>Fantacy Points Info</h1>
     <table border="1px">
         <tr>
             <td>Name</td>
@@ -48,25 +48,20 @@
 <script>
 
 import axios from "axios"
-
 export default {
-    
         name:'FantacyPoints',
         data(){
             return {
                 list:undefined
             }
         },
-
         mounted(){
             const apikey = '%APIKEY%';
             axios.get(`https://api.cricapi.com/v1/match_points?apikey=${apikey}&id=c50e6130-6718-4c11-b072-df382d24ed1c`)
             .then(res => {
-                console.warn(res.data.data);
                 this.list  = res.data.data.innings;
             }
             )
         }
-    
 }
 </script>
