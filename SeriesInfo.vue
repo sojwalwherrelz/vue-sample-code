@@ -26,11 +26,8 @@
 </div>
 </template>
 <script>
-
 import axios from "axios"
-
 export default {
-      
         name:'SeriesInfo',
         data(){
             return {
@@ -44,22 +41,20 @@ export default {
                 matches:undefined,
             }
         },
-
         mounted(){
-        const apikey = '%APIKEY%';
+            const apikey = '%APIKEY%';
             axios.get(`https://api.cricapi.com/v1/series_info?apikey=${apikey}&id=48f379be-f178-473f-8788-373696c2ec2c`)
             .then(res => {
-                this.name  = res.data.data.info.name;
+                this.name       = res.data.data.info.name;
                 this.startdate  = res.data.data.info.startdate;
-                this.enddate  = res.data.data.info.enddate;
-                this.odi  = res.data.data.info.odi;
-                this.t20  = res.data.data.info.t20;
-                this.test  = res.data.data.info.test;
-                this.squads  = res.data.data.info.squads;
-                this.matches  = res.data.data.info.matches;
+                this.enddate    = res.data.data.info.enddate;
+                this.odi        = res.data.data.info.odi;
+                this.t20        = res.data.data.info.t20;
+                this.test       = res.data.data.info.test;
+                this.squads     = res.data.data.info.squads;
+                this.matches    = res.data.data.info.matches;
             }
             )
         }
-    
 }
 </script>
