@@ -27,7 +27,7 @@ export default {
         },
 
         mounted(){
-            const apikey = 'da2589ff-76cf-4b11-8654-080868ac896b';
+            const apikey = '%APIKEY%';
             axios.get(`https://api.cricapi.com/v1/countries?apikey=${apikey}&offset=0`)
             .then(res => {
                 console.warn(res.data.data);
