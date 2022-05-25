@@ -1,6 +1,6 @@
 <template >
 <div>
-<h1>Countries Data</h1>
+<h1>Countries List</h1>
     <table border="1px">
         <tr>
             <td>Name</td>
