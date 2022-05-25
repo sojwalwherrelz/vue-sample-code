@@ -21,7 +21,7 @@
             <td>{{test}}</td>              
             <td>{{squads}}</td>              
             <td>{{matches}}</td>              
-            </tr>
+         </tr>
     </table>
 </div>
 </template>
