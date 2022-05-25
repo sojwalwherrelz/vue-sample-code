@@ -1,6 +1,6 @@
 <template >
 <div>
-<h1>MatchList Data</h1>
+    <h1>MatchList Data</h1>
     <table border='1px'>
         <tr>
             <td>Name</td>
@@ -24,32 +24,25 @@
                 </ul>
             </td>
         </tr>
-
     </table>
 </div>
 </template>
 <script>
-
 import axios from "axios"
-
 export default {
-     
         name:'CountriesApi',
         data(){
             return {
                 list:undefined
             }
         },
-
         mounted(){
-        const apikey = '%APIKEY%';
+            const apikey = '%APIKEY%';
             axios.get(`https://api.cricapi.com/v1/matches?apikey=${apikey}&offset=0`)
             .then(res => {
-                console.warn(res.data.data);
                 this.list  = res.data.data;
             }
             )
-        }
-    
+        }    
 }
 </script>
