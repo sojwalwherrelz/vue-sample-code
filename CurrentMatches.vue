@@ -1,6 +1,6 @@
 <template >
 <div>
-<h1>Current Matches</h1>
+    <h1>Current Matches</h1>
     <table border='1px'>
         <tr>
             <td>Name</td>
@@ -18,10 +18,9 @@
             <td>{{items.date}}</td>              
             <td>
                 <ul v-for="teams in items.teams" v-bind:key="teams.id">
-                        <li>
-                            teams : {{teams}}
-                        </li>
-                        
+                    <li>
+                        teams : {{teams}}
+                    </li>            
                 </ul>
             </td>              
         </tr>
@@ -29,11 +28,8 @@
 </div>
 </template>
 <script>
-
 import axios from "axios"
-
 export default {
-    
         name:'CurrentMatches',
         data(){
             return {
@@ -44,11 +40,9 @@ export default {
             const apikey = '%APIKEY%';
             axios.get(`https://api.cricapi.com/v1/currentMatches?apikey=${apikey}&offset=0`)
             .then(res => {
-                console.warn(res.data.data);
                 this.list  = res.data.data;
             }
             )
         }
-    
 }
 </script>
