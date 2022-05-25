@@ -32,20 +32,15 @@
                     <li>
                         inning : {{ scores.inning}}
                     </li>
-
                 </ul>
             </td>
         </tr>
-
     </table>
 </div>
 </template>
 <script>
-
 import axios from "axios"
-
 export default {
-    
         name:'FantacyScorecard',
         data(){
             return {
@@ -61,23 +56,20 @@ export default {
                 score:undefined,
             }
         },
-
         mounted(){
             const apikey = '%APIKEY%';
             axios.get(`https://api.cricapi.com/v1/match_scorecard?apikey=${apikey}&id=c50e6130-6718-4c11-b072-df382d24ed1c`)
             .then(res => {
-                console.warn(res.data.data.name);
-                this.matchType  = res.data.data.matchType;
-                this.name  = res.data.data.name;
-                this.status  = res.data.data.status;
-                this.venue  = res.data.data.venue;
-                this.date  = res.data.data.date;
-                this.dateTimeGMT  = res.data.data.dateTimeGMT;
-                this.teamInfo  = res.data.data.teamInfo;
-                this.score  = res.data.data.score;
+                this.matchType      = res.data.data.matchType;
+                this.name           = res.data.data.name;
+                this.status         = res.data.data.status;
+                this.venue          = res.data.data.venue;
+                this.date           = res.data.data.date;
+                this.dateTimeGMT    = res.data.data.dateTimeGMT;
+                this.teamInfo       = res.data.data.teamInfo;
+                this.score          = res.data.data.score;
             }
             )
         }
-    
 }
 </script>
