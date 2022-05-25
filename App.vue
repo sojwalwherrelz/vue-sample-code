@@ -1,7 +1,7 @@
 <template>
   <!-- <CountriesApi /> -->
   <!-- <MatchList /> -->
-  <!-- <MatchList /> -->
+  <!-- <Players /> -->
   <PlayersInfo />
   <!-- <PlayersSearch /> -->
   <!-- <SeriesInfo /> -->
