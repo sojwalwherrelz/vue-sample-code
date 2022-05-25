@@ -1,42 +1,45 @@
 <template>
-  <!-- <CountriesApi /> -->
+  <CountriesList />
   <!-- <MatchList /> -->
   <!-- <Players /> -->
-  <PlayersInfo />
+  <!-- <PlayersInfo /> -->
   <!-- <PlayersSearch /> -->
   <!-- <SeriesInfo /> -->
   <!-- <MatchInfo/> -->
   <!-- <FantacySquad/> -->
   <!-- <FantacyScorecard/> -->
   <!-- <FantacyPoints/> -->
+  <!-- <CurrentMatches /> -->
 
 </template>
 
 <script>
-// import CountriesApi from './components/CountriesApi.vue'
+import CountriesList from './components/CountriesList.vue'
 // import MatchList from './components/MatchList.vue'
 // import Players from './components/Players.vue'
-import PlayersInfo from './components/PlayersInfo.vue'
+// import PlayersInfo from './components/PlayersInfo.vue'
 // import PlayersSearch from './components/PlayersSearch.vue'
 // import SeriesInfo from './components/SeriesInfo.vue'
 // import MatchInfo from './components/MatchInfo.vue'
 // import FantacySquad from './components/FantacySquad.vue'
 // import FantacyScorecard from './components/FantacyScorecard.vue'
 // import FantacyPoints from './components/FantacyPoints.vue'
+// import CurrentMatches from './components/CurrentMatches.vue'
 
 export default {
   name: 'App',
   components: {
-    // CountriesApi,
+    CountriesList,
     // MatchList,
     // Players,
-    PlayersInfo,
+    // PlayersInfo,
     // PlayerSearch,
     // SeriesInfo,
     // MatchInfo,
     // FantacySquad,
     // FantacyScorecard,
     // FantacyPoints,
+    // CurrentMatches,
 
   }
 }
