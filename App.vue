@@ -1,10 +1,13 @@
 <template>
-  <!-- <CountriesApi msg="Welcome to Your Vue.js App"/> -->
-  <!-- <MatchList msg="Welcome to Your Vue.js App"/> -->
-  <!-- <MatchList msg="Welcome to Your Vue.js App"/> -->
-  <!-- <PlayersInfo msg="Welcome to Your Vue.js App"/> -->
-  <!-- <SeriesInfo msg="Welcome to Your Vue.js App"/> -->
-  <MatchInfo/>
+  <!-- <CountriesApi /> -->
+  <!-- <MatchList /> -->
+  <!-- <MatchList /> -->
+  <!-- <PlayersInfo /> -->
+  <!-- <SeriesInfo /> -->
+  <!-- <MatchInfo/> -->
+  <!-- <FantacySquad/> -->
+  <!-- <FantacyScorecard/> -->
+  <FantacyPoints/>
 
 </template>
 
@@ -14,7 +17,10 @@
 // import Players from './components/Players.vue'
 // import PlayersInfo from './components/PlayersInfo.vue'
 // import SeriesInfo from './components/SeriesInfo.vue'
-import MatchInfo from './components/MatchInfo.vue'
+// import MatchInfo from './components/MatchInfo.vue'
+// import FantacySquad from './components/FantacySquad.vue'
+// import FantacyScorecard from './components/FantacyScorecard.vue'
+import FantacyPoints from './components/FantacyPoints.vue'
 
 export default {
   name: 'App',
@@ -24,7 +30,10 @@ export default {
     // Players,
     // PlayersInfo,
     // SeriesInfo,
-    MatchInfo,
+    // MatchInfo,
+    // FantacySquad,
+    // FantacyScorecard,
+    FantacyPoints,
 
   }
 }
